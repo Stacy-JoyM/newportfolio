@@ -44,12 +44,12 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-lg text-gray-600">
-              I'm a passionate developer who loves creating beautiful and functional web applications.
+              I am a passionate developer who loves creating beautiful and functional web applications.
               With a focus on user experience and clean code, I bring ideas to life through modern
               web technologies.
             </p>
             <p className="text-lg text-gray-600">
-              When I'm not coding, you can find me exploring new technologies, contributing to open
+              When I am not coding, you can find me exploring new technologies, contributing to open
               source projects, or sharing knowledge with the developer community.
             </p>
             <div className="pt-4">
@@ -57,7 +57,7 @@ export default function About() {
                 href="#contact"
                 className="inline-block px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-primary-800 transition-all hover:shadow-lg"
               >
-                Let's Connect
+                Let&apos;s Connect
               </a>
             </div>
           </motion.div>

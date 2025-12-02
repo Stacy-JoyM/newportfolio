@@ -62,7 +62,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
         </motion.div>
         <div className="max-w-2xl mx-auto">
