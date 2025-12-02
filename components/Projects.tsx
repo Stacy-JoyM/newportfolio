@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     description:
       'Carbon footprint companion that tracks daily actions, surfaces climate insights, and nudges users toward practical climate-positive habits.',
     tech: ['Next.js', 'Supabase', 'Cloudflare Workers', 'Tailwind CSS'],
-    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/carbontracker.jpeg',
     links: [
       { label: 'Live Demo', href: 'https://ecotrackaiproject.netlify.app', type: 'external' },
       { label: 'Frontend Code', href: 'https://github.com/Stacy-JoyM/ecotrack', type: 'code' },
@@ -21,7 +22,7 @@ const projects = [
     description:
       'Conversational chatbot that delivers concise answers and runs entirely on Google Cloud Run for a fast, serverless experience.',
     tech: ['React', 'Google Cloud Run', 'Dialogflow', 'Tailwind CSS'],
-    imageUrl: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/chatbot.jpeg',
     links: [
       { label: 'Live Demo', href: 'https://quizbot-frontend-795951427566.us-central1.run.app/', type: 'external' },
     ],
@@ -33,7 +34,7 @@ const projects = [
     tech: ['Figma', 'UX Research', 'Design Systems'],
     imageUrl: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=80',
     links: [
-      { label: 'Presentation', href: '#', type: 'external' },
+      { label: 'Presentation', href: 'https://stacy-portfolio.my.canva.site/goeats-portfolio-pdf', type: 'external' },
     ],
   },
 ]
@@ -65,11 +66,15 @@ export default function Projects() {
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
             >
               <div className="h-48 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${project.imageUrl})` }}
+                <Image
+                  src={project.imageUrl}
+                  alt={`${project.title} preview`}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/40 pointer-events-none" />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2 text-primary">{project.title}</h3>
