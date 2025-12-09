@@ -7,7 +7,6 @@ interface Category {
   name: string;
   icon: string;
   bgColor: string;
-  textColor: string;
   borderColor: string;
 }
 
@@ -23,6 +22,7 @@ interface SkillBubbleProps {
   iconData: Category;
   iconUrl?: string;
 }
+
 const skills: Skill[] = [
   { name: 'Next.js', categories: ['Framework'], level: 95, iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg' },
   { name: 'Tailwind CSS', categories: ['Styling'], level: 95, iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' },
@@ -38,20 +38,21 @@ const skills: Skill[] = [
 ]
 
 const categories: Category[] = [
-  { name: 'Frontend', icon: '🎨', bgColor: 'bg-blue-50', textColor: 'text-blue-700', borderColor: 'border-blue-500' },
-  { name: 'Backend', icon: '⚙️', bgColor: 'bg-rose-50', textColor: 'text-rose-700', borderColor: 'border-rose-500' },
-  { name: 'Language', icon: '💻', bgColor: 'bg-green-50', textColor: 'text-green-700', borderColor: 'border-green-500' },
-  { name: 'Framework', icon: '🚀', bgColor: 'bg-orange-50', textColor: 'text-orange-700', borderColor: 'border-orange-500' },
-  { name: 'Database', icon: '🗄️', bgColor: 'bg-purple-50', textColor: 'text-purple-700', borderColor: 'border-purple-500' },
-  { name: 'Styling', icon: '✨', bgColor: 'bg-indigo-50', textColor: 'text-indigo-700', borderColor: 'border-indigo-500' },
+  { name: 'Frontend', icon: '🎨', bgColor: 'bg-blue-50', borderColor: 'border-blue-200' },
+  { name: 'Backend', icon: '⚙️', bgColor: 'bg-rose-50', borderColor: 'border-rose-200' },
+  { name: 'Language', icon: '💻', bgColor: 'bg-emerald-50', borderColor: 'border-emerald-200' },
+  { name: 'Framework', icon: '🚀', bgColor: 'bg-orange-50', borderColor: 'border-orange-200' },
+  { name: 'Database', icon: '🗄️', bgColor: 'bg-purple-50', borderColor: 'border-purple-200' },
+  { name: 'Styling', icon: '✨', bgColor: 'bg-indigo-50', borderColor: 'border-indigo-200' },
 ]
 
 const SkillBubble: React.FC<SkillBubbleProps> = ({ name, iconData, iconUrl }) => (
   <motion.div
-    whileHover={{ scale: 1.07 }}
-    className="flex flex-col items-center text-center gap-1.5"
+    whileHover={{ y: -4 }}
+    transition={{ duration: 0.2 }}
+    className="flex flex-col items-center text-center gap-3 min-w-[90px]"
   >
-    <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md border border-gray-100 p-1.5">
+    <div className={`relative flex items-center justify-center w-16 h-16 rounded-xl ${iconData.bgColor} border ${iconData.borderColor} p-3 shadow-sm hover:shadow-md transition-shadow`}>
       {iconUrl ? (
         <img
           src={iconUrl}
@@ -62,12 +63,11 @@ const SkillBubble: React.FC<SkillBubbleProps> = ({ name, iconData, iconUrl }) =>
         <span className="text-2xl">{iconData.icon}</span>
       )}
     </div>
-    <p className="text-[11px] font-semibold text-gray-600">{name}</p>
+    <p className="text-xs font-medium text-gray-700">{name}</p>
   </motion.div>
 )
 
 export default function Skills() {
-  
   const proficiencySkills = skills
     .map(skill => {
       const mainCategory = categories.find(c => c.name === skill.categories[0]);
@@ -83,13 +83,12 @@ export default function Skills() {
   return (
     <section 
       id="skills" 
-      className="py-16 bg-white"
+      className="py-20 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="overflow-hidden">
+        <div className="overflow-hidden border-y border-gray-200 py-8">
           <motion.div
-            className="flex gap-12 w-max py-4"
+            className="flex gap-14 w-max"
             animate={{ x: ['0%', '-50%'] }}
             transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
           >
@@ -103,7 +102,6 @@ export default function Skills() {
             ))}
           </motion.div>
         </div>
-        
       </div>
     </section>
   )

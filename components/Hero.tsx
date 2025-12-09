@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-base md:text-lg text-white/90 mb-8 font-sans leading-relaxed"
+            className="text-base md:text-lg text-white/90 mb-10 font-sans leading-relaxed"
           >
             Explore my projects done using programming languages such as Python and Node. 
           </motion.p>
@@ -73,17 +73,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex gap-12 flex-wrap justify-center" 
+            className="flex gap-5 flex-wrap justify-center items-center" 
           >
             <a
               href="#projects"
-              className="px-6 md:px-8 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-700 transition-all shadow-lg hover:shadow-xl font-sans"
+              className="px-8 py-3.5 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors text-sm min-w-[140px] text-center shadow-lg hover:shadow-xl"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-6 md:px-8 py-3 bg-white text-gray-800 rounded font-semibold hover:bg-gray-100 transition-all font-sans shadow-md"
+              className="px-8 py-3.5 border border-white/50 text-white rounded-lg font-medium hover:bg-white/10 transition-colors text-sm min-w-[140px] text-center"
             >
               Contact Me
             </a>
@@ -91,7 +91,7 @@ export default function Hero() {
               href="https://docs.google.com/document/d/1eArrumi8VnFbMw5rzJ2wuXMJJB-YKH0eWF_6UYSegNc/edit?tab=t.0"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 md:px-8 py-3 border border-white text-white rounded font-semibold hover:bg-white/10 transition-all font-sans shadow-md"
+              className="px-8 py-3.5 border border-white/50 text-white rounded-lg font-medium hover:bg-white/10 transition-colors text-sm min-w-[140px] text-center"
             >
               View Resume
             </a>

@@ -46,7 +46,7 @@ const toolkitPills = [
 
 export default function SkillSummary() {
   return (
-    <section className="py-20 bg-slate-50" id="skill-summary">
+    <section className="py-24 bg-white" id="skill-summary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,9 +55,10 @@ export default function SkillSummary() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Skill Summary
           </h2>
+          <div className="w-16 h-0.5 bg-emerald-600 mx-auto mb-4"></div>
           <p className="mt-4 text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             Quick overview of the stacks and strengths I rely on most often when shipping products end-to-end.
           </p>
@@ -96,7 +97,7 @@ export default function SkillSummary() {
                 </div>
                 <div className="h-2 bg-white rounded-full overflow-hidden shadow-inner">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"
+                    className="h-full bg-emerald-600 rounded-full"
                     initial={{ width: 0 }}
                     whileInView={{ width: `${capability.value}%` }}
                     viewport={{ once: true }}

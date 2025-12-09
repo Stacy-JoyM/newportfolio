@@ -47,25 +47,23 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      // Use the determined class for background and styling
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${navClass}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${navClass} backdrop-blur-sm`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            // Apply white text class to the logo
-            className={`text-2xl font-bold font-serif ${textClass}`}
+          <motion.a
+            href="#home"
+            whileHover={{ scale: 1.02 }}
+            className={`text-xl font-semibold ${textClass} cursor-pointer`}
           >
-            MyPortfolio
-          </motion.div>
+            Joy Muthoka
+          </motion.a>
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                // Apply white text and hover effect
-                className={`${textClass} hover:text-gray-300 transition-colors font-medium`}
+                className={`${textClass} text-sm font-medium hover:opacity-80 transition-opacity`}
               >
                 {item.name}
               </a>

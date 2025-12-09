@@ -33,13 +33,8 @@ export default function Services() {
   return (
     <section 
       id="services" 
-      className="py-20"
-      style={{
-        backgroundColor: '#f9f9ff', 
-        backgroundImage: 'radial-gradient(#e6e7f1 1px, transparent 0)',
-        backgroundSize: '20px 20px',
-        backgroundPosition: '0 0, 10px 10px',
-      }}
+      className="py-24 bg-white"
+      className="bg-gray-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -49,10 +44,10 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Services 
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto"></div>
+          <div className="w-16 h-0.5 bg-emerald-600 mx-auto"></div>
         </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -64,15 +59,15 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-emerald-200"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, featIndex) => (
                   <li key={featIndex} className="flex items-center gap-2 text-sm text-gray-600">
-                    <span className="text-secondary">✓</span>
+                    <span className="text-emerald-600 font-bold">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}

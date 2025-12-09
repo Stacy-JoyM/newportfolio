@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" className="py-10 bg-white">
+    <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,10 +14,10 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto"></div>
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto"></div>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -26,7 +26,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-full h-96 relative rounded-lg overflow-hidden shadow-xl">
+            <div className="w-full h-96 relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/images/tech9.jpg"
                 alt="A picture of the developer"
@@ -55,7 +55,7 @@ export default function About() {
             <div className="pt-4">
               <a
                 href="#contact"
-                className="inline-block px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-primary-800 transition-all hover:shadow-lg"
+                className="inline-block px-8 py-3.5 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors text-sm shadow-md hover:shadow-lg"
               >
                 Let&apos;s Connect
               </a>

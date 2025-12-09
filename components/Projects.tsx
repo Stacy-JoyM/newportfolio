@@ -6,13 +6,24 @@ import Image from 'next/image'
 
 const projects = [
   {
+    title: 'Lima AI (AgroFarm)',
+    description:
+      'Climate risk monitoring and parametric insurance platform for Kenyan tea farmers, featuring AI-powered chatbot assistance and disease detection.',
+    tech: ['Next.js', 'Flask', 'Google Cloud Run', 'Google Gemini AI'],
+    imageUrl: '/images/agriculture.jpeg',
+    links: [
+      { label: 'Live Demo', href: 'https://lima-ai-frontend-795951427566.us-central1.run.app', type: 'external' },
+      { label: 'Code', href: 'https://github.com/Stacy-JoyM/agrofarm', type: 'code' },
+    ],
+  },
+  {
     title: 'Ecotrack',
     description:
       'Carbon footprint companion that tracks daily actions, surfaces climate insights, and nudges users toward practical climate-positive habits.',
     tech: ['Next.js', 'Supabase', 'Cloudflare Workers', 'Tailwind CSS'],
     imageUrl: '/images/carbontracker.jpeg',
     links: [
-      { label: 'Live Demo', href: 'https://ecotrackaiproject.netlify.app', type: 'external' },
+      { label: 'Live Demo', href: 'https://ecotrackaiproject.netlify.app/login', type: 'external' },
       { label: 'Frontend Code', href: 'https://github.com/Stacy-JoyM/ecotrack', type: 'code' },
       { label: 'Backend Code', href: 'https://github.com/Stacy-JoyM/ecotrack-ai-backend', type: 'code' },
     ],
@@ -25,6 +36,7 @@ const projects = [
     imageUrl: '/images/chatbot.jpeg',
     links: [
       { label: 'Live Demo', href: 'https://quizbot-frontend-795951427566.us-central1.run.app/', type: 'external' },
+      { label: 'Code', href: 'https://github.com/Stacy-JoyM/quizbot', type: 'code' },
     ],
   },
   {
@@ -41,7 +53,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,10 +62,10 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Projects
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto"></div>
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto"></div>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -62,8 +74,8 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-200"
             >
               <div className="h-48 relative overflow-hidden">
                 <Image
@@ -74,16 +86,15 @@ export default function Projects() {
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/40 pointer-events-none" />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-primary">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm"
+                      className="px-2.5 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -99,7 +110,7 @@ export default function Projects() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-primary hover:text-secondary transition-colors text-sm font-semibold"
+                        className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors text-sm font-medium"
                       >
                         <Icon className="w-4 h-4" />
                         {link.label}

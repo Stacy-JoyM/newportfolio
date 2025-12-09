@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,10 +57,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
+          <div className="w-16 h-0.5 bg-emerald-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
@@ -82,7 +82,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
               />
             </div>
             <div>
@@ -93,7 +93,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
               />
             </div>
             <div>
@@ -112,7 +112,7 @@ export default function Contact() {
               whileTap={{ scale: 0.95 }}
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-8 py-3 bg-tertiary2 text-white rounded-lg font-semibold hover:bg-tertiary2-600 transition-all hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full px-8 py-3.5 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-all hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed shadow-md"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </motion.button>
@@ -137,15 +137,15 @@ export default function Contact() {
           >
             <a
               href="mailto:jstacymuthoka@gmail.com"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-secondary-50"
+              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-emerald-50"
             >
-              <Mail className="w-6 h-6 text-primary" />
+              <Mail className="w-6 h-6 text-gray-700" />
             </a>
             <a
               href="https://www.linkedin.com/in/joy-muthoka-830047289"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-secondary-50"
+              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-emerald-50"
             >
               <Linkedin className="w-6 h-6 text-primary" />
             </a>
@@ -153,7 +153,7 @@ export default function Contact() {
               href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-secondary-50"
+              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-110 hover:bg-emerald-50"
             >
               <Github className="w-6 h-6 text-primary" />
             </a>
