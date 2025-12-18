@@ -13,6 +13,14 @@ const experiences = [
       'Developed the frontend using basic HTML, CSS and Javascript for Minimum Viable Product presentation',
     ],
   },
+  {
+    title: 'Project Management Associate Intern',
+    company: 'Excelerate',
+    period: 'December 2025 - January 2026',
+    achievements: [
+      'Conducted research and practised project management methodologies to solve AI driven inefficiencies.'
+    ],
+  }
 ]
 
 export default function WorkExperience() {
