@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,11 +57,11 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Get In Touch
           </h2>
           <div className="w-16 h-0.5 bg-emerald-600 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2">
             I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
         </motion.div>

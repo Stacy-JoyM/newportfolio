@@ -25,7 +25,7 @@ const highlightCards = [
 
 const capabilityBars = [
   { label: 'Frontend Craft', value: 95, detail: 'Next.js · React · Tailwind' },
-  { label: 'APIs & Cloud', value: 88, detail: 'Node.js ·  Supabase · Cloudflare' },
+  { label: 'APIs & Cloud', value: 88, detail: 'Node.js · AWS · Fly.io · Cloudflare · DevOps' },
   { label: 'Data & Automation', value: 82, detail: 'PostgreSQL · SQL · Python' },
 ]
 
@@ -37,6 +37,9 @@ const toolkitPills = [
   'Google Cloud Platform',
   'Supabase',
   'Cloudflare',
+  'AWS',
+  'Fly.io',
+  'DevOps',
   'PostgreSQL',
   'TypeScript',
   'SQL',
@@ -46,7 +49,7 @@ const toolkitPills = [
 
 export default function SkillSummary() {
   return (
-    <section className="py-24 bg-white" id="skill-summary">
+    <section className="py-16 md:py-24 bg-white" id="skill-summary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +107,7 @@ export default function SkillSummary() {
                     transition={{ duration: 0.9, delay: 0.2 + index * 0.1 }}
                   />
                 </div>
-                <p className="text-xs uppercase tracking-[0.4em] text-slate-400 mt-2">
+                <p className="text-xs uppercase tracking-wide sm:tracking-[0.3em] text-slate-400 mt-2 break-words">
                   {capability.detail}
                 </p>
               </motion.div>
