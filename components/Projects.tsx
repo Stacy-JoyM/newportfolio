@@ -15,8 +15,8 @@ const projects = [
     ],
     tech: ['React', 'Node.js', 'Python', 'Figma', 'REST APIs', 'Bitbucket', 'Fly.io', 'M-Pesa STK'],
     imageUrl: '/images/tawc.png',
-    imageClassName: 'object-contain object-center',
-    imageContainerClassName: 'bg-black',
+    imageClassName: 'object-contain object-center p-6',
+    imageContainerClassName: 'bg-gray-50',
     links: [
       { label: 'Live Site', href: 'https://tawc.co.ke', type: 'external' },
     ],
